@@ -6,7 +6,7 @@ export default function PoliciesSection() {
       </h1>
 
       {/* Terms and Conditions */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6 space-y-4">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6 space-y-4">
         <h2 className="text-2xl font-semibold">Terms and Conditions Policy</h2>
         <p>
           By making Initial or Final Submission to journals of Open Access
@@ -37,7 +37,7 @@ export default function PoliciesSection() {
 
       {/* Privacy Policy */}
       <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 space-y-4">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400">
           Privacy Policy
         </h2>
         <p>Our protects any information you provide when using this website.</p>
@@ -56,7 +56,7 @@ export default function PoliciesSection() {
       </div>
 
       {/* Disclaimer Policy */}
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white rounded-xl shadow-lg p-6 space-y-4">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6 space-y-4">
         <h2 className="text-2xl font-semibold">Disclaimer Policy</h2>
         <p>Authors are solely responsible for the content of their articles.</p>
         <p>
@@ -72,7 +72,7 @@ export default function PoliciesSection() {
 
       {/* Cancellation & Refund Policy */}
       <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 space-y-4">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400">
           Cancellation & Refund Policy
         </h2>
         <p>Authors can withdraw papers before final submission/payment.</p>
@@ -84,7 +84,7 @@ export default function PoliciesSection() {
       </div>
 
       {/* Shipping Policy */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6 space-y-4">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6 space-y-4">
         <h2 className="text-2xl font-semibold">Shipping Policy</h2>
         <p>
           Our is a digital open-access publisher; there is no shipping of

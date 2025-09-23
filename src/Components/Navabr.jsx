@@ -16,7 +16,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 px-6 py-4">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 px-6 ">
       {/* Main Navbar */}
       <nav
         className={`${

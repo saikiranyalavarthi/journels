@@ -3,7 +3,7 @@ export default function AboutUs() {
     <div className="max-w-5xl mx-auto py-12 px-6 space-y-10">
       {/* Title Section */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-4xl font-bold text-teal-900 dark:text-teal-300 mb-4">
           Welcome to Open Access Research Journals Publication
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -16,7 +16,7 @@ export default function AboutUs() {
       </div>
 
       {/* Objectives Section */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">Our Objectives</h2>
         <ul className="list-disc list-inside space-y-2">
           <li>To explore the latest research developments.</li>
@@ -31,7 +31,7 @@ export default function AboutUs() {
 
       {/* Why Publish Section */}
       <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-4">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400 mb-4">
           Why publish with Open Access Research Journals Publication?
         </h2>
         <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">

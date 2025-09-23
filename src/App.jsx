@@ -10,6 +10,7 @@ import AboutJournals from "./pages/AboutJournals";
 import OurPolicies from "./pages/OurPolicies";
 import CrossmarkPolicy from "./pages/CrossmarkPolicy";
 import Footer from "./Components/Footer";
+import ManuscriptForm from "./pages/ManuscriptForm";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/journals" element={<Journals />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/submit-manuscript" element={<ManuscriptForm />} />
 
           <Route path="/about/journals" element={<AboutJournals />} />
           <Route path="/about/policies" element={<OurPolicies />} />

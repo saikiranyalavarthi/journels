@@ -2,12 +2,12 @@ export default function Contact() {
   return (
     <div className="max-w-5xl mx-auto py-12 px-6">
       {/* Title */}
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+      <h1 className="text-3xl font-bold text-teal-900 dark:text-teal-300 mb-6 text-center">
         Contact Us
       </h1>
 
       {/* Contact Information */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6 mb-10">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6 mb-10">
         <h2 className="text-xl font-semibold mb-3">
           Open Access Research Journal Publication welcomes your comments,
           ideas, support, and other feedback.
@@ -53,28 +53,28 @@ export default function Contact() {
 
       {/* Contact Form */}
       <div className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h2 className="text-xl font-semibold text-teal-900 dark:text-teal-300 mb-4">
           Send Us a Message
         </h2>
         <form className="space-y-4">
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
           <textarea
             placeholder="Your Message"
             rows="4"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
           ></textarea>
           <button
             type="submit"
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:opacity-90"
+            className="px-6 py-3 bg-gradient-to-r from-teal-700 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:opacity-90"
           >
             Send Message
           </button>

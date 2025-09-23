@@ -6,7 +6,7 @@ export default function CrossMarkSection() {
       </h1>
 
       {/* CrossMark Description */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6 space-y-4">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6 space-y-4">
         <p>
           CrossMark is a multi-publisher initiative to provide a standard way
           for readers to locate the authoritative version of an article or other
@@ -40,8 +40,8 @@ export default function CrossMarkSection() {
       </div>
 
       {/* Correction and Retraction Policies */}
-      <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 space-y-4">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400">
+      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 shadow-md rounded-xl p-6 space-y-4">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400">
           Correction and Retraction Policies
         </h2>
         <p>

@@ -90,20 +90,16 @@ export default function Journals() {
         {journals.map((journal, idx) => (
           <div
             key={idx}
-            className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-lg transition"
+            className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white shadow-md rounded-xl p-6 hover:shadow-xl transition"
           >
-            <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-3">
-              {journal.title}
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              {journal.desc}
-            </p>
+            <h2 className="text-2xl font-semibold mb-3">{journal.title}</h2>
+            <p className="mb-4">{journal.desc}</p>
             <div className="flex flex-wrap gap-4">
               {journal.links.map((link, linkIdx) => (
                 <a
                   key={linkIdx}
                   href={link.url}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium rounded-lg shadow hover:opacity-90"
+                  className="px-4 py-2 bg-white text-teal-900 text-sm font-medium rounded-lg shadow hover:bg-gray-100 transition"
                 >
                   {link.name}
                 </a>

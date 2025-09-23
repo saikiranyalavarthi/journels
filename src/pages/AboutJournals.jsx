@@ -19,7 +19,7 @@ export default function About() {
       </div>
 
       {/* Vision Section */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-xl shadow-lg p-6">
+      <div className="bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 text-white rounded-xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">Vision</h2>
         <p>
           We aim to serve as an effective medium for advancing scientific
@@ -29,8 +29,8 @@ export default function About() {
       </div>
 
       {/* Aim and Scope Section */}
-      <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-4">
+      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 shadow-md rounded-xl p-6">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400 mb-4">
           Aim and Scope
         </h2>
         <p className="text-gray-700 dark:text-gray-300">
@@ -43,7 +43,7 @@ export default function About() {
       </div>
 
       {/* Objectives Section */}
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white rounded-xl shadow-lg p-6">
+      <div className="bg-gradient-to-r from-teal-800 via-teal-600 to-teal-400 text-white rounded-xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">Objectives</h2>
         <ul className="list-disc list-inside space-y-2">
           <li>To explore the latest research developments.</li>
@@ -57,8 +57,8 @@ export default function About() {
       </div>
 
       {/* Why Publish Section */}
-      <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6">
-        <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-4">
+      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 shadow-md rounded-xl p-6">
+        <h2 className="text-2xl font-semibold text-teal-800 dark:text-teal-400 mb-4">
           Why publish with Open Access Research Journals Publication?
         </h2>
         <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
