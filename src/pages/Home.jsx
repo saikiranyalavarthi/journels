@@ -16,7 +16,7 @@ const HomeSectionJournals = () => {
   ];
 
   return (
-    <div className="bg-white font-sans text-gray-800">
+    <div className="bg-white font-sans text-gray-800 mt-20">
       {/* Main journal info section */}
       <div className="min-h-screen p-6 flex flex-col md:flex-row max-w-7xl mx-auto gap-8">
         {/* Left Panel */}
@@ -26,11 +26,11 @@ const HomeSectionJournals = () => {
             <div className="bg-blue-50 p-2 rounded-t-lg text-blue-800 font-semibold">
               Editor in Chief
             </div>
-            <img
+            {/* <img
               src="https://i.imgur.com/Sm8bJPz.jpg"
               alt="Aaron Lisberg Ph.D"
               className="mx-auto rounded-md w-28 h-28 object-cover mt-4"
-            />
+            /> */}
             <p className="mt-3 font-semibold">Aaron Lisberg Ph.D</p>
             <hr className="my-4 border-gray-300" />
             <div className="text-left text-sm leading-relaxed font-semibold">
@@ -121,7 +121,7 @@ const HomeSectionJournals = () => {
             <h4 className="font-semibold text-center mb-2 text-teal-900">
               PubMed Indexed Articles
             </h4>
-            <p className="text-center text-sm text-gray-600">PMID: 34308441</p>
+            <p className="text-center text-sm text-gray-600">PMID artciles</p>
           </div>
         </div>
       </div>

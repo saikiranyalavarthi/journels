@@ -88,11 +88,11 @@ const Footer = () => {
           <h3 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">
             OPEN ACCESS POLICY
           </h3>
-          <img
+          {/* <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cc-by-nc-icon.svg/1200px-Cc-by-nc-icon.svg.png"
             alt="Creative Commons"
             className="w-20 mb-3"
-          />
+          /> */}
           <p className="text-sm">
             Journal of Case Reports is an open access journal, and all articles
             are available free immediately after publication.
