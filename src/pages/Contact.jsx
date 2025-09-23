@@ -28,10 +28,10 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            https://oarjpublication.com/
+            https://journals.com/
           </a>
         </p>
-        <p>✉️ E-mail: info@oarjpublication.com</p>
+        <p>✉️ E-mail: info@journalspublication.com</p>
 
         <p className="mt-3">
           Authors who are interested in getting their{" "}
