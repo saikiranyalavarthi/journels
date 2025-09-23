@@ -7,7 +7,7 @@ export default function Home() {
           Welcome to Open Access Research Journals Publication
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          Open Access Research Journals Publication (OARJ) is an internationally
+          Open Access Research Journals Publication (Our) is an internationally
           peer-reviewed platform dedicated to publishing original research
           articles, reviews, and case studies with an emphasis on latest
           scientific findings. Our goal is to bridge global research knowledge
@@ -38,7 +38,7 @@ export default function Home() {
           Our Vision
         </h2>
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          OARJ aspires to become the leading international platform for
+          Our aspires to become the leading international platform for
           publishing cutting-edge research, enabling scholars to contribute
           meaningfully to global scientific, technological, and social
           advancements.
