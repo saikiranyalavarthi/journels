@@ -11,6 +11,8 @@ import OurPolicies from "./pages/OurPolicies";
 import CrossmarkPolicy from "./pages/CrossmarkPolicy";
 import Footer from "./Components/Footer";
 import ManuscriptForm from "./pages/ManuscriptForm";
+import ArticlePage from "./pages/ArticlePage";
+import BoardPage from "./pages/BoardPage";
 
 export default function App() {
   return (
@@ -24,6 +26,10 @@ export default function App() {
           <Route path="/journals" element={<Journals />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/submit-manuscript" element={<ManuscriptForm />} />
+
+          <Route path="/article/:id" element={<ArticlePage />} />
+          <Route path="/editorial-board" element={<BoardPage />} />
+          {/* Nested Routes for About Section */}
 
           <Route path="/about/journals" element={<AboutJournals />} />
           <Route path="/about/policies" element={<OurPolicies />} />

@@ -16,19 +16,23 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 px-6 ">
-      {/* Main Navbar */}
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       <nav
         className={`${
-          scrolled ? "bg-white/90 shadow-md" : "bg-white/70"
-        } text-black backdrop-blur-md transition-all duration-300`}
+          scrolled ? "bg-white/95 shadow-lg" : "bg-white/80"
+        } backdrop-blur-md text-black transition-all duration-300`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
-          <h1 className="text-2xl font-bold tracking-wide">Journals</h1>
+          <Link
+            to="/"
+            className="text-2xl font-extrabold tracking-wide text-yellow-600"
+          >
+            Journals
+          </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex gap-6 items-center">
+          <div className="hidden md:flex gap-8 items-center text-sm font-medium">
             <Link to="/" className="hover:text-yellow-600 transition">
               Home
             </Link>
@@ -38,22 +42,22 @@ export default function Navbar() {
               <button className="flex items-center gap-1 hover:text-yellow-600 transition">
                 About Us <ChevronDown size={16} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-52 bg-white text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
                 <Link
                   to="/about/journals"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   About Journals
                 </Link>
                 <Link
                   to="/about/policies"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Our Policies
                 </Link>
                 <Link
                   to="/about/crossmark"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Crossmark Policy
                 </Link>
@@ -65,30 +69,24 @@ export default function Navbar() {
               <button className="flex items-center gap-1 hover:text-yellow-600 transition">
                 For Authors <ChevronDown size={16} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-52 bg-white text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
                 <Link
                   to="/editorial-board"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Editorial Board
                 </Link>
                 <Link
-                  to="/articles"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  to="/article/:id"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Articles
                 </Link>
                 <Link
                   to="/submit-manuscript"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Submit Manuscript
-                </Link>
-                <Link
-                  to="/reprints"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Reprints
                 </Link>
               </div>
             </div>
@@ -113,7 +111,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-white/80 backdrop-blur-md px-6 py-4 space-y-3 text-black">
+          <div className="md:hidden bg-white/95 backdrop-blur-md px-6 py-6 space-y-4 text-black font-medium shadow-lg">
             <Link
               to="/"
               className="block hover:text-yellow-600 transition"
@@ -131,7 +129,7 @@ export default function Navbar() {
                 About Us <ChevronDown size={16} />
               </button>
               {mobileAboutOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div className="mt-2 space-y-2 pl-4 text-sm">
                   <Link
                     to="/about/journals"
                     className="block hover:text-yellow-600"
@@ -166,7 +164,7 @@ export default function Navbar() {
                 For Authors <ChevronDown size={16} />
               </button>
               {mobileAuthorsOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div className="mt-2 space-y-2 pl-4 text-sm">
                   <Link
                     to="/editorial-board"
                     className="block hover:text-yellow-600"
@@ -175,7 +173,7 @@ export default function Navbar() {
                     Editorial Board
                   </Link>
                   <Link
-                    to="/articles"
+                    to="/article/:id"
                     className="block hover:text-yellow-600"
                     onClick={() => setOpen(false)}
                   >
@@ -187,13 +185,6 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     Submit Manuscript
-                  </Link>
-                  <Link
-                    to="/reprints"
-                    className="block hover:text-yellow-600"
-                    onClick={() => setOpen(false)}
-                  >
-                    Reprints
                   </Link>
                 </div>
               )}
