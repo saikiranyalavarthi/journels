@@ -18,8 +18,8 @@ export default function App() {
     <Router>
       <Navbar />
 
-      {/* Apply mt-12 for margin-top */}
-      <div className="p-6 mt-12">
+      {/* Responsive margin-top: mt-6 mobile, mt-8 tablet, mt-12 desktop */}
+      <div className="p-6 mt-6 sm:mt-8 md:mt-12">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -35,6 +35,7 @@ export default function App() {
           <Route path="/about/crossmark" element={<CrossmarkPolicy />} />
         </Routes>
       </div>
+
       <Footer />
     </Router>
   );
