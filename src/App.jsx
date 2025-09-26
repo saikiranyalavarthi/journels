@@ -13,11 +13,13 @@ import Footer from "./Components/Footer";
 import ManuscriptForm from "./pages/ManuscriptForm";
 import ArticlePage from "./pages/ArticlePage";
 import BoardPage from "./pages/BoardPage";
+import HeroSection from "./pages/HeroSection";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <HeroSection />
 
       <div className="p-6">
         <Routes>

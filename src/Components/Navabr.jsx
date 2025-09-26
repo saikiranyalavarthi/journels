@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import MiniNavbar from "./MiniNavbar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,16 +18,22 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      {/* Mini Top Bar */}
+      <MiniNavbar />
+
+      {/* Main Navbar */}
       <nav
         className={`${
-          scrolled ? "bg-white/95 shadow-lg" : "bg-white/80"
-        } backdrop-blur-md text-black transition-all duration-300`}
+          scrolled
+            ? "bg-white/30 backdrop-blur-md shadow-lg border-b border-white/20"
+            : "bg-white/20 backdrop-blur-md border-b border-white/10"
+        } transition-all duration-300`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-extrabold tracking-wide text-yellow-600"
+            className="text-2xl font-extrabold tracking-wide text-yellow-600 drop-shadow-sm"
           >
             Journals
           </Link>
@@ -42,22 +49,22 @@ export default function Navbar() {
               <button className="flex items-center gap-1 hover:text-yellow-600 transition">
                 About Us <ChevronDown size={16} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-52 bg-white text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-52 bg-white/70 backdrop-blur-md text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
                 <Link
                   to="/about/journals"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   About Journals
                 </Link>
                 <Link
                   to="/about/policies"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   Our Policies
                 </Link>
                 <Link
                   to="/about/crossmark"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   Crossmark Policy
                 </Link>
@@ -69,22 +76,22 @@ export default function Navbar() {
               <button className="flex items-center gap-1 hover:text-yellow-600 transition">
                 For Authors <ChevronDown size={16} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-52 bg-white text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-52 bg-white/70 backdrop-blur-md text-black rounded-lg shadow-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
                 <Link
                   to="/editorial-board"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   Editorial Board
                 </Link>
                 <Link
                   to="/article/:id"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   Articles
                 </Link>
                 <Link
                   to="/submit-manuscript"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-gray-100/50 rounded-md"
                 >
                   Submit Manuscript
                 </Link>
@@ -101,7 +108,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-black"
             onClick={() => setOpen(!open)}
             aria-label="Toggle Menu"
           >
@@ -111,7 +118,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md px-6 py-6 space-y-4 text-black font-medium shadow-lg">
+          <div className="md:hidden bg-white/70 backdrop-blur-md border-t border-white/20 px-6 py-6 space-y-4 text-black font-medium shadow-lg">
             <Link
               to="/"
               className="block hover:text-yellow-600 transition"
