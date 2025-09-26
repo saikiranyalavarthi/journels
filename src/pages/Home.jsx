@@ -1,6 +1,7 @@
 import React from "react";
 import LatestArticles from "./LatestArticles";
 import ClientsSay from "./clientTestimonials";
+import HeroSection from "./HeroSection";
 
 const HomeSectionJournals = () => {
   const quickLinks = [
@@ -17,6 +18,9 @@ const HomeSectionJournals = () => {
 
   return (
     <div className="bg-white font-sans text-gray-800 mt-20">
+      <div>
+        <HeroSection />
+      </div>
       {/* Main journal info section */}
       <div className="min-h-screen p-6 flex flex-col md:flex-row max-w-7xl mx-auto gap-8">
         {/* Left Panel */}
