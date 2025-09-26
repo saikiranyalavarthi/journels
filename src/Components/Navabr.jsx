@@ -18,8 +18,10 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-      {/* Mini Top Bar */}
-      <MiniNavbar />
+      {/* Mini Top Bar - hidden on mobile */}
+      <div className="hidden md:block">
+        <MiniNavbar />
+      </div>
 
       {/* Main Navbar */}
       <nav

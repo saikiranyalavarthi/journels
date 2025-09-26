@@ -19,7 +19,7 @@ export default function App() {
       <Navbar />
 
       {/* Responsive margin-top: mt-6 mobile, mt-8 tablet, mt-12 desktop */}
-      <div className="p-6 mt-6 sm:mt-8 md:mt-12">
+      <div className="p-6 mt-4 sm:mt-4 md:mt-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
