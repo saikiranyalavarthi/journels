@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Journals from "./pages/Journals";
+
 import Contact from "./pages/Contact";
 import Navbar from "./Components/Navabr";
 import AboutJournals from "./pages/AboutJournals";
@@ -12,6 +12,10 @@ import Footer from "./Components/Footer";
 import ManuscriptForm from "./pages/ManuscriptForm";
 import ArticlePage from "./pages/ArticlePage";
 import BoardPage from "./pages/BoardPage";
+import AimScope from "./pages/Aim";
+import InstructionsForAuthors from "./pages/InstructionsForAuthors";
+import Archives from "./pages/Archives";
+import SpecialIssues from "./pages/SpecialIssues";
 
 export default function App() {
   return (
@@ -23,8 +27,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/journals" element={<Journals />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/aim-scope" element={<AimScope />} />
+          <Route path="/Archives" element={<Archives />} />
+
+          <Route path="/instructions" element={<InstructionsForAuthors />} />
+          <Route path="/special-issues" element={<SpecialIssues />} />
+
           <Route path="/submit-manuscript" element={<ManuscriptForm />} />
           <Route path="/article/:id" element={<ArticlePage />} />
           <Route path="/editorial-board" element={<BoardPage />} />
