@@ -1,4 +1,36 @@
+// Contact.jsx
+import { useState } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    journalInfo: "",
+    message: "",
+    captcha: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Message submitted successfully!");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      journalInfo: "",
+      message: "",
+      captcha: "",
+    });
+  };
+
   return (
     <div className="max-w-5xl mx-auto py-12 px-6">
       {/* Title */}
@@ -56,28 +88,97 @@ export default function Contact() {
         <h2 className="text-xl font-semibold text-teal-900 dark:text-teal-300 mb-4">
           Send Us a Message
         </h2>
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-          />
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Name Fields */}
+          <div className="flex space-x-4">
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              placeholder="First Name *"
+              className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              placeholder="Last Name *"
+              className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
+            />
+          </div>
+
+          {/* Email */}
           <input
             type="email"
-            placeholder="Your Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Your Email *"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            required
+          />
+
+          {/* Subject */}
+          <input
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="Subject *"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            required
+          />
+
+          {/* Journal Info */}
+          <input
+            type="text"
+            name="journalInfo"
+            value={formData.journalInfo}
+            onChange={handleChange}
+            placeholder="Journal Information"
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
+
+          {/* Message */}
           <textarea
-            placeholder="Your Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             rows="4"
+            placeholder="Your Message *"
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            required
           ></textarea>
-          <button
-            type="submit"
-            className="px-6 py-3 bg-gradient-to-r from-teal-700 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:opacity-90"
-          >
-            Send Message
-          </button>
+
+          {/* Captcha */}
+
+          {/* Buttons */}
+          <div className="flex justify-between">
+            <button
+              type="reset"
+              onClick={() =>
+                setFormData({
+                  firstName: "",
+                  lastName: "",
+                  email: "",
+                  subject: "",
+                  journalInfo: "",
+                  message: "",
+                })
+              }
+            ></button>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-gradient-to-r from-teal-700 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:opacity-90"
+            >
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </div>

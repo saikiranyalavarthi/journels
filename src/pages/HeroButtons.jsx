@@ -166,7 +166,7 @@ const HeroButtons = ({ onClick }) => {
         <button
           key={btn}
           onClick={() => onClick(btn)}
-          className="px-6 py-3 bg-teal-700 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-teal-800 transition transform"
+          className="px-6 py-3 bg-teal-700 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-teal-800 transition transform cursor-pointer"
         >
           {btn}
         </button>

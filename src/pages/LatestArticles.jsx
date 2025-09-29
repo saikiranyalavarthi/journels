@@ -139,7 +139,7 @@ const LatestArticles = () => {
               <button className="flex items-center gap-2 bg-gradient-to-r from-teal-900 via-teal-700 to-teal-500 hover:from-teal-800 hover:via-teal-600 hover:to-teal-400 text-white px-3 py-1 rounded text-sm transition">
                 <FaFilePdf /> DOWNLOAD
               </button>
-              <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded text-sm transition">
+              <button className="flex items-center gap-2 bg-yellow-600 hover:bg-yellow-600 text-white px-3 py-1 rounded text-sm transition">
                 <FaBookOpen /> READ FULL ARTICLE
               </button>
             </div>

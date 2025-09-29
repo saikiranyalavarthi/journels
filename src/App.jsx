@@ -16,6 +16,7 @@ import InstructionsForAuthors from "./pages/InstructionsForAuthors";
 import Archives from "./pages/Archives";
 import SpecialIssues from "./pages/SpecialIssues";
 import { Contact } from "lucide-react";
+import ContactUs from "./pages/Contact";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/aim-scope" element={<AimScope />} />
           <Route path="/Archives" element={<Archives />} />
+          <Route path="/contact" element={<ContactUs />} />
 
           <Route path="/instructions" element={<InstructionsForAuthors />} />
           <Route path="/special-issues" element={<SpecialIssues />} />

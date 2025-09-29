@@ -302,6 +302,9 @@ import QuickSubmission from "../Components/QuickSubmission";
 import TrackSubmission from "./TrackSubmission";
 import ClientsSay from "./clientTestimonials";
 import LatestArticles from "./LatestArticles";
+import PublicationProcedure from "./PublicationProcedure";
+import CallForPaperSection from "./CallForPaperSection";
+import QuickLinks from "./QuickLinks";
 
 // Subscribe Component
 const Subscribe = () => {
@@ -585,7 +588,9 @@ const HomeSectionJournals = () => {
 
       {/* Latest Articles */}
       <LatestArticles />
-
+      <PublicationProcedure />
+      <CallForPaperSection />
+      <QuickLinks />
       {/* Testimonials */}
       <div className="border-t border-gray-200 mt-12 pt-8">
         <ClientsSay />
