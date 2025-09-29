@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImg from "/banner1.jpg"; // Replace with your local image path
 
-export default function HeroSection() {
+export default function Banner() {
   return (
     <section
       className="relative bg-cover bg-center text-white min-h-screen flex items-center animate-fadeIn"

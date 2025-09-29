@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFilePdf, FaBookOpen } from "react-icons/fa";
 
+// Mock data
 const latestArticles = [
   {
     volume: "12",
@@ -80,12 +81,45 @@ const latestArticles = [
 ];
 
 const LatestArticles = () => {
+  const [activeType, setActiveType] = useState("All");
+
+  // Filter by type
+  const filteredArticles =
+    activeType === "All"
+      ? latestArticles
+      : latestArticles.filter((a) => a.type === activeType);
+
+  const categories = [
+    "All",
+    "Case Report",
+    "Review Article",
+    "Research Article",
+  ];
+
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-2xl font-bold text-blue-700 mb-6">Latest Articles</h2>
 
+      {/* Tabs for filtering */}
+      <div className="flex gap-3 mb-6 flex-wrap">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveType(cat)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+              activeType === cat
+                ? "bg-teal-700 text-white"
+                : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Article Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {latestArticles.map((article, index) => (
+        {filteredArticles.map((article, index) => (
           <div
             key={index}
             className="bg-white border rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col justify-between"
@@ -111,6 +145,29 @@ const LatestArticles = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Subscribe Section */}
+      <div className="mt-12 bg-gradient-to-r from-teal-900 to-teal-600 text-white rounded-lg shadow p-6 text-center">
+        <h3 className="text-xl font-semibold mb-4">Subscribe for Updates</h3>
+        <p className="mb-4 text-sm text-teal-100">
+          Get the latest case reports, research articles, and reviews delivered
+          straight to your inbox.
+        </p>
+        <form className="flex flex-col sm:flex-row gap-3 justify-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="px-4 py-2 rounded text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 w-full sm:w-80"
+            required
+          />
+          <button
+            type="submit"
+            className="bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition"
+          >
+            Subscribe
+          </button>
+        </form>
       </div>
     </div>
   );
