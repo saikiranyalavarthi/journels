@@ -9,6 +9,7 @@ import {
   Instagram,
   Youtube,
 } from "lucide-react";
+import { Link } from "react-router-dom"; // Make sure you have react-router-dom installed
 
 const Footer = () => {
   return (
@@ -16,13 +17,13 @@ const Footer = () => {
       {/* Animated Background Map */}
       <div className="absolute inset-0 opacity-10">
         <img
-          src="/map.jpg" // <-- place a map/library svg in public/images
+          src="/map.jpg"
           alt="Map Background"
           className="w-full h-full object-cover animate-slow-zoom"
         />
       </div>
 
-      {/* Gradient Overlay for readability */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-800/70 to-transparent"></div>
 
       {/* Footer Content */}
@@ -98,28 +99,29 @@ const Footer = () => {
         </div>
 
         {/* Useful Links */}
+
         <div>
           <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">
             USEFUL LINKS
           </h3>
           <ul className="space-y-2 text-sm">
             {[
-              "Editorial Board",
-              "Submit Manuscript",
-              "Pay Online",
-              "Author Guidelines",
-              "Peer Review Process",
-              "Plagiarism Policy",
-              "Registration Form",
-              "Contact",
+              { name: "Editorial Board", path: "/editorial-board" },
+              { name: "Submit Manuscript", path: "/submit-manuscript" },
+              { name: "Pay Online", path: "/pay-online" },
+              { name: "Author Guidelines", path: "/author-guidelines" },
+              { name: "Peer Review Process", path: "/peer-review" },
+              { name: "Plagiarism Policy", path: "/plagiarism-policy" },
+              { name: "Registration Form", path: "/registration" },
+              { name: "contact", path: "/contact" },
             ].map((link, idx) => (
               <li key={idx}>
-                <a
-                  href="#"
+                <Link
+                  to={link.path}
                   className="hover:underline hover:decoration-red-500 hover:underline-offset-4 transition"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -147,7 +149,7 @@ const Footer = () => {
           <form className="flex flex-col space-y-3">
             <input
               type="email"
-              placeholder="your.address@email.com"
+              placeholder="your.email@example.com"
               className="px-4 py-2 text-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
               required
             />
@@ -155,7 +157,7 @@ const Footer = () => {
               type="submit"
               className="bg-yellow-500 text-gray-900 font-semibold py-2 rounded hover:bg-yellow-400 transition"
             >
-              Submit
+              Subscribe
             </button>
           </form>
         </div>

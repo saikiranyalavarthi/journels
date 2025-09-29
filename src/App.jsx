@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
-import Contact from "./pages/Contact";
 import Navbar from "./Components/Navabr";
 import AboutJournals from "./pages/AboutJournals";
 import OurPolicies from "./pages/OurPolicies";
@@ -16,6 +15,7 @@ import AimScope from "./pages/Aim";
 import InstructionsForAuthors from "./pages/InstructionsForAuthors";
 import Archives from "./pages/Archives";
 import SpecialIssues from "./pages/SpecialIssues";
+import { Contact } from "lucide-react";
 
 export default function App() {
   return (
