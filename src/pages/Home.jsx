@@ -3,8 +3,11 @@
 // import HeroButtons from "./HeroButtons";
 // import QuickSubmission from "../Components/QuickSubmission";
 // import TrackSubmission from "./TrackSubmission";
-
 // import ClientsSay from "./clientTestimonials";
+// import LatestArticles from "./LatestArticles";
+// import PublicationProcedure from "./PublicationProcedure";
+// import CallForPaperSection from "./CallForPaperSection";
+// import QuickLinks from "./QuickLinks";
 
 // // Subscribe Component
 // const Subscribe = () => {
@@ -44,6 +47,7 @@
 //     { id: 4, title: "Cardiology Research", type: "Research Articles" },
 //     { id: 5, title: "Clinical Review 1", type: "Reviews" },
 //   ];
+
 //   const types = [...new Set(articlesData.map((a) => a.type))];
 //   const filteredArticles = articlesData.filter((a) => a.type === activeType);
 
@@ -93,7 +97,7 @@
 //     "Editorial Management",
 //     "Tracking System",
 //     "Plagiarism Checker",
-//     "Indexing Services",
+
 //     "Reprints",
 //     "eBooks",
 //     "Video Articles",
@@ -284,7 +288,12 @@
 //           </div>
 //         </div>
 //       </div>
-// <LatestArticles/>
+
+//       {/* Latest Articles */}
+//       <LatestArticles />
+//       <PublicationProcedure />
+//       <CallForPaperSection />
+//       <QuickLinks />
 //       {/* Testimonials */}
 //       <div className="border-t border-gray-200 mt-12 pt-8">
 //         <ClientsSay />
@@ -294,7 +303,6 @@
 // };
 
 // export default HomeSectionJournals;
-
 import React, { useState } from "react";
 import Banner from "../Components/Banner";
 import HeroButtons from "./HeroButtons";
@@ -394,7 +402,6 @@ const HomeSectionJournals = () => {
     "Editorial Management",
     "Tracking System",
     "Plagiarism Checker",
-    "Indexing Services",
     "Reprints",
     "eBooks",
     "Video Articles",
@@ -563,8 +570,9 @@ const HomeSectionJournals = () => {
             </ul>
           </div>
 
+          {/* We Offer Section */}
           <div className="border rounded-lg shadow bg-gradient-to-r from-teal-900 to-teal-600 text-white p-4">
-            <h4 className="font-semibold text-center mb-3">Options</h4>
+            <h4 className="font-semibold text-center mb-3">We Offer</h4>
             <div className="grid grid-cols-2 gap-3 text-sm">
               {["Reprints", "eBooks", "Video Articles", "PPTs"].map((item) => (
                 <button
@@ -577,11 +585,18 @@ const HomeSectionJournals = () => {
             </div>
           </div>
 
-          <div className="border bg-gray-50 p-4 rounded-lg shadow">
+          {/* Track Submission Card */}
+          {/* Track Submission Card */}
+          <div
+            onClick={() => setActiveSection("Track Submission")}
+            className="border bg-gray-50 p-4 rounded-lg shadow cursor-pointer hover:bg-teal-50 transition"
+          >
             <h4 className="font-semibold text-center mb-2 text-teal-900">
-              PubMed Indexed Articles
+              Track Your Submission
             </h4>
-            <p className="text-center text-sm text-gray-600">PMID articles</p>
+            <p className="text-center text-sm text-gray-600">
+              Easily check the status of your article anytime.
+            </p>
           </div>
         </div>
       </div>
@@ -591,6 +606,7 @@ const HomeSectionJournals = () => {
       <PublicationProcedure />
       <CallForPaperSection />
       <QuickLinks />
+
       {/* Testimonials */}
       <div className="border-t border-gray-200 mt-12 pt-8">
         <ClientsSay />
